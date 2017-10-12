@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="robots" content ="noindex,nofollow">
+		<style>body{background-image:url('momiji3.jpg'); }
+		</style>
+		<script type="text/javascript" src="./script.js" ></script>
+	</head>
+
+	<body>
+		<h1>Proxy List</h1>
+		<a href="glype">glype</a><br>		
+		<a href="php-proxy">php-proxy</a><br>
+		<a href="cgi-proxy/nph-proxy.pl">cgi-proxy</a><br>
+
+		<form id="form">
+		
+		<p><li style="font-size:18px;"><strong>Search Engine</strong></li><br>
+			<input type="checkbox" name="proxy" value="0" />glype
+			<input type="checkbox" name="proxy" value="1" />php-proxy
+			<input type="checkbox" name="proxy" value="2" />cgi-proxy
+		</p>
+
+		<p>
+			<select name="search_engine">
+				<option value="google">google.com</option>
+				<option value="yahoo">yahoo.co.jp</option>
+				<option value="duckduckgo">duckduckgo.com</option>
+				<option value="bing">bing.jp</option>
+				<option value="msn">msn.com</option>
+				<option value="excite">excite.co.jp</option>
+				<option value="infoseek">infoseek.co.jp</option>
+				<option value="livedoor">livedoor.com</option>
+				<option value="goo">goo.ne.jp</option>
+				<option value="fresheye">fresheye.com</option>
+				<option value="biglobe">biglobe.ne.jp</option>
+				<option value="nifty">nifty.com</option>
+				<option value="yandex">yandex.com</option>
+			</select>
+		</p>
+
+		<p><input type="button" value="open in new tab" onclick="func();" /></p>
+		</form>
+
+		<p style="font-size: 18px; color: #FF0000;">OR Maybe...</p>
+		<form name="form2">
+		<p><li style="font-size:18px;"><strong>Direct Search</strong></li><br>
+			<input type="checkbox" name="site" value="0" />glype
+			<input type="checkbox" name="site" value="1" />php-proxy
+			<input type="checkbox" name="site" value="2" />cgi-proxy
+		</p>
+
+		<input type="text" name="direct" placeholder="type url here" onkeydown="go()" /><br>
+		<br>
+		<input type="button" value="go!" onclick="func2();" />
+		</form>
+		
+		<p>Cgi works much better than php and php does better than glype<br>I strongly recommend you only use cgi<br>Url encription is not necessarily needed,since this site uses SSL/TLS</p><a href="https://security.stackexchange.com/questions/142803/can-my-employer-see-what-i-do-on-the-internet-when-i-am-connected-to-the-company#answer-142818">check this out</a>
+		
+	</body>
+</html>
