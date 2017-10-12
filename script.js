@@ -18,17 +18,17 @@ var ary = ["https://proxy.shkval.net/glype/browse.php?u=http://","","https://pro
 
 function func(){
 	var ways = document.getElementsByName('proxy') ;
-	var engine = false;
+	var isChecked = false;
 	var site = form.search_engine.value;
 
 	for(var i = 0;i <= 2; i++){
-			if(ways[i].checked == true){
-    			engine = true;
+		if(ways[i].checked == true){
+    			isChecked = true;
     			window.open(ary[i] + data[site]);
     		}
 	}
 
-	if(engine == false){
+	if(isChecked == false){
 		alert("you must select at least 1 checkbox");
 	}
 }
