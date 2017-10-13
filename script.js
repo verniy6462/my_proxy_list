@@ -16,11 +16,11 @@ window.onload = function(){
 
 var ary = ["https://proxy.shkval.net/cgi-proxy/nph-proxy.pl/en/40/https/","https://proxy.shkval.net/glype/browse.php?u=http://"];
 
-function phProxy(url){
-	document.getElementById('phproxy').contentDocument.getElementsByName('url')[0].value = url;
+function phProxy(tarSite){
+	document.getElementById('phproxy').contentDocument.getElementsByName('url')[0].value = tarSite;
 	document.getElementById('phproxy').contentDocument.forms[0].submit();
 	window.open(document.getElementById('phproxy').contentWindow.location.href.toString());
-}
+	}
 
 function func(){
 	var ways = document.getElementsByName('proxy') ;
@@ -81,7 +81,7 @@ function go(){
 }
 
 var data ={
-	google : "google.com",
+	google : "google.co.jp",
 	yahoo : "yahoo.co.jp",
 	duckduckgo : "duckduckgo.com",
 	bing : "bing.jp",
