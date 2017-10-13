@@ -14,18 +14,29 @@ window.onload = function(){
 	document.form2.direct.value = tarCookie;
 };
 
-var ary = ["https://proxy.shkval.net/glype/browse.php?u=http://","","https://proxy.shkval.net/cgi-proxy/nph-proxy.pl/en/40/https/"];
+var ary = ["https://proxy.shkval.net/cgi-proxy/nph-proxy.pl/en/40/https/","https://proxy.shkval.net/glype/browse.php?u=http://"];
+
+function phProxy(url){
+	document.getElementById('phproxy').contentDocument.getElementsByName('url')[0].value = url;
+	document.getElementById('phproxy').contentDocument.forms[0].submit();
+	window.open(document.getElementById('phproxy').contentWindow.location.href.toString());
+}
 
 function func(){
 	var ways = document.getElementsByName('proxy') ;
 	var isChecked = false;
 	var site = form.search_engine.value;
 
-	for(var i = 0;i <= 2; i++){
+	for(var i = 0;i <= 1; i++){
 		if(ways[i].checked == true){
     			isChecked = true;
     			window.open(ary[i] + data[site]);
     		}
+	}
+
+	if(ways[2].checked == true){
+		isChecked = true;
+		phProxy(data[site]);
 	}
 
 	if(isChecked == false){
@@ -42,12 +53,18 @@ function func2(){
 	if(tarUrl == false){
 		alert("enter the url you want to go");
 	}else{
-		for(var i = 0;i <= 2;i++){
+		for(var i = 0;i <= 1;i++){
 			if(ways[i].checked == true){
 				window.open(ary[i] + tarUrl);
 				document.cookie = 'myLastValue=';
 				isChecked = true;
 			}
+		}
+
+		if(ways[2].checked == true){
+			phProxy(tarUrl);
+			document.cookie = 'myLastValue=';
+			isChecked = true;
 		}
 
 		if(isChecked == false){
@@ -85,5 +102,6 @@ glype
 
 document.getElementById('phproxy').contentDocument.getElementsByName('url')[0].value = "https://google.com";
 document.getElementById('phproxy').contentDocument.forms[0].submit();
+window.open(document.getElementById('phproxy').contentWindow.location.href.toString());
 php-proxy
 */

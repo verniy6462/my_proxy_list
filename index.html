@@ -8,15 +8,15 @@
 
 	<body style="background-image:url('momiji3.jpg');">
 		<h1>Proxy List</h1>
+		<a href="cgi-proxy/nph-proxy.pl">cgi-proxy</a><br>
 		<a href="glype">glype</a><br>		
 		<a href="php-proxy">php-proxy</a><br>
-		<a href="cgi-proxy/nph-proxy.pl">cgi-proxy</a><br>
 
 		<form id="form">
 		<p><li style="font-size:18px;"><strong>Search Engine</strong></li><br>
-			<input type="checkbox" name="proxy" value="0" />glype
-			<input type="checkbox" name="proxy" value="1" />php-proxy
-			<input type="checkbox" name="proxy" value="2" />cgi-proxy
+			<input type="checkbox" name="proxy" />cgi-proxy
+			<input type="checkbox" name="proxy" />glype
+			<input type="checkbox" name="proxy" />php-proxy
 		</p>
 		<p>
 			<select name="search_engine">
@@ -42,9 +42,9 @@
 		
 		<form name="form2">
 		<p><li style="font-size:18px;"><strong>Direct Search</strong></li><br>
-			<input type="checkbox" name="site" value="0" />glype
-			<input type="checkbox" name="site" value="1" />php-proxy
-			<input type="checkbox" name="site" value="2" />cgi-proxy
+			<input type="checkbox" name="site" />cgi-proxy
+			<input type="checkbox" name="site" />glype
+			<input type="checkbox" name="site" />php-proxy
 		</p>
 		<input type="text" name="direct" placeholder="type url here" onkeydown="go()" /><br><br>
 		<input type="button" value="go!" onclick="func2();" />
