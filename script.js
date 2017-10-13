@@ -79,6 +79,11 @@ var data ={
 	yandex : "yandex.com"
 	};
 
-//document.getElementById('input').value = 'https://google.com';
-//document.getElementsByClassName('button')[0].click();
-//glype
+/*document.getElementById('input').value = 'https://google.com';
+document.getElementsByClassName('button')[0].click();
+glype
+
+document.getElementById('phproxy').contentDocument.getElementsByName('url')[0].value = "https://google.com";
+document.getElementById('phproxy').contentDocument.forms[0].submit();
+php-proxy
+*/
