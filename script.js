@@ -1,6 +1,12 @@
 var ary = ["https://proxy.shkval.net/cgi-proxy/nph-proxy.pl/en/40/https/","https://proxy.shkval.net/glype/browse.php?u=http://"];
 
 window.onload = function(){
+/*	if(window.opener.location.origin === "https://proxy.shkval.net"){
+		window.open(window.opener.location.href);
+		window.opener.window.open("","_self");
+		window.opener.close();
+	}
+*/
 	var tarCookie;
 	var cookies = document.cookie;
 	var prc = cookies.match( /myLastValue=(.*)/ );
@@ -74,12 +80,6 @@ function func2(){
 	}
 }
 
-function go(){
-	if(window.event.keyCode == 13){
-		document.getElementsByName('search')[0].click();
-	}
-}
-
 var data ={
 	google : "google.co.jp",
 	yahoo : "yahoo.co.jp",
@@ -94,16 +94,12 @@ var data ={
 	biglobe : "biglobe.ne.jp",
 	nifty : "nifty.com",
 	yandex : "yandex.com"
-	};
+};
 
 /*document.getElementById('input').value = 'https://google.com';
 document.getElementsByClassName('button')[0].click();
 glype
 
-document.getElementById('phproxy').contentDocument.getElementsByName('url')[0].value = "https://google.com";
-document.getElementById('phproxy').contentDocument.forms[0].submit();
 window.open(document.getElementById('phproxy').contentWindow.location.href.toString());
 php-proxy
-
-style="width:0;height:0;border:0; border:none;"
 */
