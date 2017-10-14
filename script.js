@@ -1,3 +1,5 @@
+var ary = ["https://proxy.shkval.net/cgi-proxy/nph-proxy.pl/en/40/https/","https://proxy.shkval.net/glype/browse.php?u=http://"];
+
 window.onload = function(){
 	var tarCookie;
 	var cookies = document.cookie;
@@ -14,13 +16,11 @@ window.onload = function(){
 	document.form2.direct.value = tarCookie;
 };
 
-var ary = ["https://proxy.shkval.net/cgi-proxy/nph-proxy.pl/en/40/https/","https://proxy.shkval.net/glype/browse.php?u=http://"];
-
 function phProxy(tarSite){
 	document.getElementById('phproxy').contentDocument.getElementsByName('url')[0].value = tarSite;
 	document.getElementById('phproxy').contentDocument.forms[0].submit();
-	window.open(document.getElementById('phproxy').contentWindow.location.href.toString());
-	}
+	window.open("https://proxy.shkval.net");
+}
 
 function func(){
 	var ways = document.getElementsByName('proxy') ;
