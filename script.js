@@ -76,7 +76,7 @@ function func2(){
 
 function go(){
 	if(window.event.keyCode == 13){
-		func2();
+		document.getElementsByName('search')[0].click();
 	}
 }
 
@@ -104,4 +104,6 @@ document.getElementById('phproxy').contentDocument.getElementsByName('url')[0].v
 document.getElementById('phproxy').contentDocument.forms[0].submit();
 window.open(document.getElementById('phproxy').contentWindow.location.href.toString());
 php-proxy
+
+style="width:0;height:0;border:0; border:none;"
 */
