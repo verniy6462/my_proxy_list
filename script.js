@@ -1,4 +1,19 @@
 var ary = ["./cgi-proxy/nph-proxy.pl/en/40/https/","./php-proxy/index.php?q=","./glype/browse.php?u=http://"];
+var data ={
+	google : "google.co.jp",
+	yahoo : "yahoo.co.jp",
+	duckduckgo : "duckduckgo.com",
+	bing : "bing.jp",
+	msn : "msn.com",
+	excite : "excite.co.jp",
+	infoseek : "infoseek.co.jp",
+	livedoor : "livedoor.com",
+	goo : "goo.ne.jp",
+	fresheye : "fresheye.com",
+	biglobe : "biglobe.ne.jp",
+	nifty : "nifty.com",
+	yandex : "yandex.com"
+};
 
 window.onload = function(){
 	var tarCookie;
@@ -61,22 +76,6 @@ function go(){
 		func2();
 	}
 }
-
-var data ={
-	google : "google.co.jp",
-	yahoo : "yahoo.co.jp",
-	duckduckgo : "duckduckgo.com",
-	bing : "bing.jp",
-	msn : "msn.com",
-	excite : "excite.co.jp",
-	infoseek : "infoseek.co.jp",
-	livedoor : "livedoor.com",
-	goo : "goo.ne.jp",
-	fresheye : "fresheye.com",
-	biglobe : "biglobe.ne.jp",
-	nifty : "nifty.com",
-	yandex : "yandex.com"
-};
 
 /*document.getElementById('input').value = 'https://google.com';
 document.getElementsByClassName('button')[0].click();
