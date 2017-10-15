@@ -1,12 +1,6 @@
-var ary = ["https://proxy.shkval.net/cgi-proxy/nph-proxy.pl/en/40/https/","https://proxy.shkval.net/glype/browse.php?u=http://"];
+var ary = ["./cgi-proxy/nph-proxy.pl/en/40/https/","./php-proxy/index.php?q=","./glype/browse.php?u=http://"];
 
 window.onload = function(){
-/*	if(window.opener.location.origin === "https://proxy.shkval.net"){
-		window.open(window.opener.location.href);
-		window.opener.window.open("","_self");
-		window.opener.close();
-	}
-*/
 	var tarCookie;
 	var cookies = document.cookie;
 	var prc = cookies.match( /myLastValue=(.*)/ );
@@ -22,27 +16,16 @@ window.onload = function(){
 	document.form2.direct.value = tarCookie;
 };
 
-function phProxy(tarSite){
-	document.getElementById('phproxy').contentDocument.getElementsByName('url')[0].value = tarSite;
-	document.getElementById('phproxy').contentDocument.forms[0].submit();
-	window.open("https://proxy.shkval.net");
-}
-
 function func(){
 	var ways = document.getElementsByName('proxy') ;
 	var isChecked = false;
 	var site = form.search_engine.value;
 
-	for(var i = 0;i <= 1; i++){
+	for(var i = 0;i <= 2; i++){
 		if(ways[i].checked == true){
     			isChecked = true;
     			window.open(ary[i] + data[site]);
     		}
-	}
-
-	if(ways[2].checked == true){
-		isChecked = true;
-		phProxy(data[site]);
 	}
 
 	if(isChecked == false){
@@ -59,24 +42,23 @@ function func2(){
 	if(tarUrl == false){
 		alert("enter the url you want to go");
 	}else{
-		for(var i = 0;i <= 1;i++){
+		document.cookie = 'myLastValue=' + document.form2.direct.value +'; max-age=60*60*12';
+		for(var i = 0;i <= 2;i++){
 			if(ways[i].checked == true){
 				window.open(ary[i] + tarUrl);
-				document.cookie = 'myLastValue=';
 				isChecked = true;
 			}
 		}
 
-		if(ways[2].checked == true){
-			phProxy(tarUrl);
-			document.cookie = 'myLastValue=';
-			isChecked = true;
-		}
-
 		if(isChecked == false){
 			alert("you must select at least 1 checkbox");
-			document.cookie = 'myLastValue=' + document.form2.direct.value +'; max-age=60*60*12';
 		}
+	}
+}
+
+function go(){
+	if(window.event.keyCode == 13){
+		func2();
 	}
 }
 
