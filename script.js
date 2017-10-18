@@ -1,4 +1,4 @@
-var ary = ["./cgi-proxy/nph-proxy.pl/en/40/https/","./php-proxy/index.php?q=","./glype/browse.php?u=http://"];
+var ary = ["./cgi-proxy/nph-proxy.pl/en/20/https/","./php-proxy/index.php?q=","./glype/browse.php?u=http://"];
 var data ={
 	google : "google.co.jp",
 	yahoo : "yahoo.co.jp",
@@ -16,20 +16,19 @@ var data ={
 };
 
 window.onload = function(){
-	var tarCookie;
-	var cookies = document.cookie;
-	var prc = cookies.match( /myLastValue=(.*)/ );
-
-	if(prc[1].indexOf(";") != -1){
-		var end = prc[1].indexOf(";");
-		var target = prc[1].slice(0,end);
-		tarCookie = target;
-	}else{
-		tarCookie = prc[1];
-	}
-
-	document.form2.direct.value = tarCookie;
+	var obj = document.cookie.match(/myLastValue=(.*)/);
+	document.form2.direct.value = proc(obj);
 };
+
+function proc(prev){
+        if(prev[1].indexOf(";") != -1){
+                var end = prev[1].indexOf(";");
+                var target = prev[1].slice(0,end);
+                return target;
+        }else{
+                return prev[1];
+        }
+}
 
 function func(){
 	var ways = document.getElementsByName('proxy') ;
@@ -77,10 +76,20 @@ function go(){
 	}
 }
 
+/*
+document.cookie = 'isAuth=lycoris';
+
+var ref = document.cookie.match(/referrer=(.*)/);
+var z = proc(ref).toString();
+if(z !== "radiata"){
+        location.href = "https://proxy.shkval.net/";
+}
+
+var auth = document.cookie.match(/isAuth=(.*)/);
+
+*/
+
 /*document.getElementById('input').value = 'https://google.com';
 document.getElementsByClassName('button')[0].click();
 glype
-
-window.open(document.getElementById('phproxy').contentWindow.location.href.toString());
-php-proxy
 */
