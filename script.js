@@ -20,6 +20,18 @@ window.onload = function(){
 	document.form2.direct.value = proc(obj);
 };
 
+/*
+var auth = document.cookie.match(/isAuth=(.*)/);
+var ref = document.cookie.match(/referrer=(.*)/);
+if(proc(auth) != "lycoris" && proc(ref) != "radiata"){
+        location.href = "./index.php";
+}
+
+setTimeout(function(){document.cookie = 'isAuth=lycoris; max-age=60*60*24*7';},3000);
+
+//somehow this doesn't work
+*/
+
 function proc(prev){
         if(prev[1].indexOf(";") != -1){
                 var end = prev[1].indexOf(";");
@@ -75,19 +87,6 @@ function go(){
 		func2();
 	}
 }
-
-/*
-document.cookie = 'isAuth=lycoris';
-
-var ref = document.cookie.match(/referrer=(.*)/);
-var z = proc(ref).toString();
-if(z !== "radiata"){
-        location.href = "https://proxy.shkval.net/";
-}
-
-var auth = document.cookie.match(/isAuth=(.*)/);
-
-*/
 
 /*document.getElementById('input').value = 'https://google.com';
 document.getElementsByClassName('button')[0].click();
