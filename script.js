@@ -76,11 +76,3 @@ function go(){
 		func2();
 	}
 }
-
-/*document.getElementById('input').value = 'https://google.com';
-document.getElementsByClassName('button')[0].click();
-glype
-
-window.open(document.getElementById('phproxy').contentWindow.location.href.toString());
-php-proxy
-*/
